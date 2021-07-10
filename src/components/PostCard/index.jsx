@@ -65,6 +65,7 @@ const index = ({ post, props }) => {
           <div className={classes.cardDetails}>
             <CardContent>
               <Link
+                exact
                 to={"Articles-detail/" + id + "/" + to_slug(title) + ".html"}
                 style={{
                   fontSize: "20px",

@@ -10,7 +10,7 @@ const Auth0ProviderWithHistory = ({ children }) => {
     <Auth0Provider
       domain={domain}
       clientId={clientId}
-      redirectUrl={window.location.origin}
+      redirectUrl="https://dinhtran0402.github.io/"
     >
       {children}
     </Auth0Provider>
