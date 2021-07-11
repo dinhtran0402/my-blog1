@@ -5,22 +5,19 @@ import Articles from "../Articles/index";
 import Homes from "../Home/index";
 import Profile from "../Profile/detailsProfile";
 
-
 const routeURL = () => {
   return (
     <div style={{ marginTop: "67px" }}>
-
-        <Switch>
-          <Route exact path="/" component={Homes}></Route>
-          <Route path="/Articles" component={Articles}></Route>
-          <Route
-            path="/Articles-detail/:id/:slug.html"
-            component={Details}
-          ></Route>
-          <Route path="/Profile" component={Profile}></Route>
-          <Route component={Homes}></Route>
-        </Switch>
-
+      <Switch>
+        <Route exact path="/my-blog1" component={Homes}></Route>
+        <Route path="/Articles" component={Articles}></Route>
+        <Route
+          path="/Articles-detail/:id/:slug.html"
+          component={Details}
+        ></Route>
+        <Route path="/Profile" component={Profile}></Route>
+        <Route component={Homes}></Route>
+      </Switch>
     </div>
   );
 };
