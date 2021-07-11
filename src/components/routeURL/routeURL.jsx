@@ -9,7 +9,7 @@ const routeURL = () => {
   return (
     <div style={{ marginTop: "67px" }}>
       <Switch>
-        <Route exact path="/my-blog1" component={Homes}></Route>
+        <Route exact path="" component={Homes}></Route>
         <Route path="/Articles" component={Articles}></Route>
         <Route
           path="/Articles-detail/:id/:slug.html"
