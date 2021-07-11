@@ -57,7 +57,7 @@ export default function Index() {
       <AppBar className={classes.nav1}>
         {/* {!isManagementPage ? ( */}
         <Toolbar>
-          <NavLink exact to="./my-blog1">
+          <NavLink exact to="/">
             <Avatar
               alt="ReySharp"
               src="https://image.pngaaa.com/930/2507930-middle.png"
@@ -76,7 +76,7 @@ export default function Index() {
                     color: "#61dafb",
                   }}
                   className="linkMenu"
-                  to="./my-blog1"
+                  to="/"
                 >
                   Home
                 </NavLink>
