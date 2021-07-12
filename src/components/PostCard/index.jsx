@@ -66,7 +66,7 @@ const index = ({ post, props }) => {
             <CardContent>
               <Link
                 exact
-                to={"Articles-detail/" + id + "/" + to_slug(title) + ".html"}
+                to={"/Articles-detail/" + id + "/" + to_slug(title) + ".html"}
                 style={{
                   fontSize: "20px",
                   textDecoration: "none",
