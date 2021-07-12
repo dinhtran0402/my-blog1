@@ -10,13 +10,14 @@ const routeURL = () => {
     <div style={{ marginTop: "67px" }}>
       <Switch>
         <Route exact path="/" component={Homes}></Route>
-        <Route path="/Articles" component={Articles}></Route>
+        <Route exact path="/Articles" component={Articles}></Route>
         <Route
+          exact
           path="/Articles-detail/:id/:slug.html"
           component={Details}
         ></Route>
-        <Route path="/Profile" component={Profile}></Route>
-        <Route component={Homes}></Route>
+        <Route exact path="/Profile" component={Profile}></Route>
+        <Route  component={Homes}></Route>
       </Switch>
     </div>
   );

@@ -87,7 +87,7 @@ export default function Index() {
                     color: "#61dafb",
                   }}
                   className="linkMenu"
-                  to="./Articles"
+                  to="/Articles"
                 >
                   Article
                 </NavLink>
