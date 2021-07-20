@@ -16,6 +16,8 @@ import LoginButton from "../Auth/LoginButton";
 import LogoutButton from "../Auth/LogoutButton";
 import DrawerSide from "../DrawerSide/index";
 import Profile from "../Profile/index";
+import Moon from "../../moon.png";
+import Sun from "../../sunny.png";
 const Styles = makeStyles((theme) => ({
   title: {
     flexGrow: 1,
@@ -27,11 +29,11 @@ const Styles = makeStyles((theme) => ({
     padding: "10px",
     color: "#696969",
   },
-  nav1: {
-    background: "#FFE4E1",
-  },
+  // nav1: {
+  //   background: "#FFE4E1",
+  // },
 }));
-export default function Index() {
+export default function Index({ themeMode, lightMode, darkMode }) {
   //SWITCH HEADER
   // const location = useLocation();
 
@@ -57,26 +59,25 @@ export default function Index() {
       <AppBar className={classes.nav1}>
         {/* {!isManagementPage ? ( */}
         <Toolbar>
-          <NavLink exact to="/">
-            <Avatar
-              alt="ReySharp"
-              src="https://image.pngaaa.com/930/2507930-middle.png"
-            />
-          </NavLink>
-
           {isMatch ? (
             <DrawerSide />
           ) : (
             <>
+              <NavLink exact to="/my-blog1">
+                <Avatar
+                  alt="ReySharp"
+                  src="https://image.pngaaa.com/930/2507930-middle.png"
+                />
+              </NavLink>
               <Typography variant="h6" className={classes.title}>
                 <NavLink
                   exact
                   activeStyle={{
                     fontWeight: "bold",
-                    color: "#61dafb",
+                    color: "#4682B4",
                   }}
                   className="linkMenu"
-                  to="/"
+                  to="/my-blog1"
                 >
                   Home
                 </NavLink>
@@ -84,18 +85,38 @@ export default function Index() {
                   exact
                   activeStyle={{
                     fontWeight: "bold",
-                    color: "#61dafb",
+                    color: "#4682B4",
                   }}
                   className="linkMenu"
                   to="/Articles"
                 >
                   Article
                 </NavLink>
+                <NavLink
+                  exact
+                  activeStyle={{
+                    fontWeight: "bold",
+                    color: "#4682B4",
+                  }}
+                  className="linkMenu"
+                  to="/Contact"
+                >
+                  Contact
+                </NavLink>
               </Typography>
             </>
           )}
 
           <div className={isMatch && "float-left"}>
+            {themeMode === "dark" ? (
+              <IconButton onClick={lightMode}>
+                <img className="lightMode" src={Sun} alt="" />
+              </IconButton>
+            ) : (
+              <IconButton onClick={darkMode}>
+                <img className="darkMode" src={Moon} alt="" />
+              </IconButton>
+            )}
             <IconButton>
               <NavLink
                 exact

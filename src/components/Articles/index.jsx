@@ -57,7 +57,7 @@ const Index = () => {
   };
   return (
     <Container className="wow fadeIn">
-      <Typography className={classes.title} font variant="h3">
+      <Typography align="center" className={classes.title} font variant="h3">
         Articles
       </Typography>
 

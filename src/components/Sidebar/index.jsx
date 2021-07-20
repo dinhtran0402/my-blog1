@@ -8,16 +8,21 @@ const Styles = makeStyles((theme) => ({
   sidebarAboutBox: {
     padding: theme.spacing(2),
   },
+  card: {
+    background: "#424242",
+    color: "white",
+    padding: "10px",
+  },
 }));
 const index = (props) => {
   const classes = Styles();
   const { title, description, social } = props;
   return (
     <Grid>
-        <Paper elevation={0} className={classes.sidebarAboutBox}>
-          <Typography>{title}</Typography>
-          <Typography>{description}</Typography>
-        </Paper>
+      <Paper elevation={0} className={classes.sidebarAboutBox && classes.card}>
+        <Typography variant="h4">{title}</Typography>
+        <Typography>{description}</Typography>
+      </Paper>
 
       <Typography variant="h6" gutterBottom className={classes.sidebarSection}>
         Social

@@ -1,11 +1,12 @@
-import { Typography, Grid } from "@material-ui/core";
+import { Grid, Typography } from "@material-ui/core";
 import Divider from "@material-ui/core/Divider";
-import React from "react";
 import Markdown from "markdown-to-jsx";
+import React from "react";
 import { posts } from "../../Data/Data";
-const index = ({ title }) => {
+
+const Index = ({ title }) => {
   return (
-    <Grid >
+    <Grid>
       <Typography>{title}</Typography>
       <Divider style={{ background: "white" }} />
       {posts.map((post) => (
@@ -17,4 +18,4 @@ const index = ({ title }) => {
   );
 };
 
-export default index;
+export default Index;

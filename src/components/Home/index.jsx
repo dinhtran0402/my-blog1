@@ -2,11 +2,11 @@ import { Container, Grid, makeStyles } from "@material-ui/core";
 import React, { useState } from "react";
 import ReactPaginate from "react-paginate";
 import { sidebar } from "../Data/Data";
+import JsonData from "../Data/PostCardData.json";
 import Main from "../Main/index";
 import Post from "../Post/index";
 import PostCard from "../PostCard/index";
 import Sidebar from "../Sidebar/index";
-import JsonData from "../Data/PostCardData.json";
 
 const Styles = makeStyles((theme) => ({
   mainGrid: {
@@ -14,7 +14,6 @@ const Styles = makeStyles((theme) => ({
   },
 }));
 const Index = (props) => {
-
   const classes = Styles();
   const [posts] = useState(JsonData.slice(0, 50));
   const [pageNumber, setPageNumber] = useState(0);
@@ -56,7 +55,7 @@ const Index = (props) => {
       />
       <Grid container spacing={5} className={classes.mainGrid}>
         <Grid item xs={12} md={8}>
-          <Main title="From the firehose" />
+          <Main className="post-list" title="From the firehose" />
         </Grid>
         <Grid item xs={12} md={4}>
           <Sidebar

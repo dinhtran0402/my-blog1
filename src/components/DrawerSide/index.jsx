@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import Drawer from "@material-ui/core/Drawer";
-import { IconButton, List, ListItemIcon } from "@material-ui/core";
+import { Avatar, IconButton, List, ListItemIcon } from "@material-ui/core";
 import { ListItem } from "@material-ui/core";
 import { ListItemText } from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 const Index = () => {
   const [openDrawer, setOpenDrawer] = useState(false);
   return (
@@ -15,17 +15,49 @@ const Index = () => {
         open={openDrawer}
       >
         <List>
+          {/* <ListItem>
+            <ListItemIcon>
+              <ListItemText>
+                <NavLink style={{ textAlign: "center" }} exact to="/my-blog1">
+                  <Avatar
+                    alt="ReySharp"
+                    src="https://image.pngaaa.com/930/2507930-middle.png"
+                  />
+                </NavLink>
+              </ListItemText>
+            </ListItemIcon>
+          </ListItem> */}
           <ListItem>
             <ListItemIcon>
               <ListItemText>
-                <Link to="/">Home</Link>
+                <NavLink
+                  exact
+                  activeStyle={{
+                    fontWeight: "bold",
+                    color: "#61dafb",
+                  }}
+                  className="linkMenu"
+                  to="/my-blog1"
+                >
+                  Home
+                </NavLink>
               </ListItemText>
             </ListItemIcon>
           </ListItem>
           <ListItem divider button>
             <ListItemIcon>
               <ListItemText>
-                <Link to="./Articles">Article</Link>
+                <NavLink
+                  exact
+                  activeStyle={{
+                    fontWeight: "bold",
+                    color: "#61dafb",
+                  }}
+                  className="linkMenu"
+                  to="/Articles"
+                >
+                  Article
+                </NavLink>
               </ListItemText>
             </ListItemIcon>
           </ListItem>
