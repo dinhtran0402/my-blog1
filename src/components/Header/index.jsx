@@ -18,6 +18,7 @@ import DrawerSide from "../DrawerSide/index";
 import Profile from "../Profile/index";
 import Moon from "../../moon.png";
 import Sun from "../../sunny.png";
+import Logo from "../../low-res-logo.png";
 const Styles = makeStyles((theme) => ({
   title: {
     flexGrow: 1,
@@ -64,10 +65,7 @@ export default function Index({ themeMode, lightMode, darkMode }) {
           ) : (
             <>
               <NavLink exact to="/my-blog1">
-                <Avatar
-                  alt="ReySharp"
-                  src="https://image.pngaaa.com/930/2507930-middle.png"
-                />
+                <img className="" src={Logo} alt="" />
               </NavLink>
               <Typography variant="h6" className={classes.title}>
                 <NavLink
